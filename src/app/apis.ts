@@ -1,8 +1,9 @@
+import { huobiApi } from "../utils/apiConfig"
 
    
-export async function getHuobiSymbols(): Promise<{ data: Object }> {
-  const response = await fetch('/huobi/-/x/pro/v2/beta/common/symbols', {
-    method: 'POST',
+export async function getHuobiSymbols(): Promise<{ data: Array<Object> }> {
+  const response = await fetch(huobiApi.getSymbols, {
+    method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },

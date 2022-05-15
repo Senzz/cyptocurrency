@@ -1,11 +1,33 @@
 {
   "extends": "next/core-web-vitals",
+  "plugins": ["@typescript-eslint"],
   "rules": {
     // ...
     "semi": ["error", "never"],
     "indent": ["error", 2],
-    "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+    "@typescript-eslint/no-unused-vars": "warn",
+    // "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
     "react-hooks/rules-of-hooks": "error", // 检查 Hook 的规则
-    "react-hooks/exhaustive-deps": "warn" // 检查 effect 的依赖
+    "react-hooks/exhaustive-deps": "warn", // 检查 effect 的依赖
+    "no-multi-spaces": [
+      2,
+      {
+        "ignoreEOLComments": true,
+        "exceptions": {
+          "Property": true,
+          "BinaryExpression": false,
+          "VariableDeclarator": true,
+          "ImportDeclaration": true
+        }
+      }
+    ],
+    "keyword-spacing": [2, { "before": true, "after": true }],
+    "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
+    "arrow-spacing": [2, { "before": true, "after": true }],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "space-before-blocks": [2, "always"],
+    "space-infix-ops": 2,
+    "block-spacing": "error",
+    "object-curly-spacing": ["error", "always"]
   }
 }

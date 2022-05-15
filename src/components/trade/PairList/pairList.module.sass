@@ -1,0 +1,63 @@
+.trade-symbol-list-wrapper
+  background-color: var(--bg)
+  color: var(--second-color)
+  width: 420px
+  height: 100vh
+  overflow: hidden
+  .trade-symbol-list
+    display: flex
+    flex-direction: column
+    height: 100%
+    .pairs-head
+      display: flex
+      align-items: center
+      height: 20px
+      text-align: end
+      font-size: 12px
+      padding: 0 10px 0 40px
+      box-sizing: border-box
+      position: relative
+      cursor: pointer
+      .pair
+        width: 56%
+        text-align: start
+        display: flex
+        flex-flow: row nowrap
+        align-items: center
+        white-space: nowrap
+      .last-price
+        width: 25%
+        text-align: end
+      .change
+        width: 84px
+        text-align: end
+
+    .pairs-body
+      flex: 1
+      display: flex
+      flex-direction: column
+      overflow: auto
+      .pairs-item
+        height: 24px
+        display: flex
+        align-items: center
+        text-align: end
+        font-size: 12px
+        padding: 0 10px 0 40px
+        box-sizing: border-box
+        position: relative
+        cursor: pointer
+        flex: none
+        .pair
+          width: 56%
+          text-align: start
+          display: flex
+          flex-flow: row nowrap
+          align-items: center
+          white-space: nowrap
+        .last-price
+          width: 25%
+          text-align: end
+        .change
+          width: 84px
+          text-align: end

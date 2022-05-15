@@ -1,17 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { useEffect } from 'react'
-// import { getSymbols } from '../app/futures/symbols/symbolsReducer'
-// import { useAppDispatch } from '../app/hooks'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
-  // const dispatch = useAppDispatch()
-  useEffect(() => {
-    console.log('1')
-
-  }, [])
   return (
     <div className={styles.container}>
       <Head>
